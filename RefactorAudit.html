@@ -1,0 +1,4638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>CodePro Code Audit for src for JoshHack</title>
+
+	<meta name="GENERATOR" content="CodePro Server"/>
+
+	<style type="text/css">
+	.highSeverity { background-color: #ff9999; }
+	.mediumSeverity { }
+	.lowSeverity { }
+	</style>
+
+	<style type="text/css">
+	body {font: 70% verdana,arial,helvetica; color: #000000}
+p  {margin-top:  3px; line-height: 1.5em}
+h1 {margin-top:  0px; margin-bottom: 6px; font: bold 150% verdana,arial,helvetica}
+h2 {margin-top: 12px; margin-bottom: 6px; font: bold 125% verdana,arial,helvetica}
+h3 {margin-top: 12px; margin-bottom: 6px; font: bold 100% verdana,arial,helvetica}
+h4 {margin-top: 12px; margin-bottom: 6px; font: bold 100% verdana,arial,helvetica}
+.rounded_page{display:block}
+.rounded_page *{display:block; height:1px; overflow:hidden; font-size:.01em; background:#7799DD}
+.rounded_page1{ margin-left:3px; margin-right:3px; padding-left:1px; padding-right:1px; border-left:1px solid #c4d3ef; border-right:1px solid #c4d3ef; background:#99b2e5}
+.rounded_page2{ margin-left:1px; margin-right:1px; padding-right:1px; padding-left:1px; border-left:1px solid #f1f4fa; border-right:1px solid #f1f4fa; background:#90ace3}
+.rounded_page3{ margin-left:1px; margin-right:1px; border-left:1px solid #90ace3; border-right:1px solid #90ace3;}
+.rounded_page4{ border-left:1px solid #c4d3ef; border-right:1px solid #c4d3ef}
+.rounded_page5{ border-left:1px solid #99b2e5; border-right:1px solid #99b2e5}
+.rounded_pagefg{ background:#7799DD}
+.rounded_section{display:block}
+.rounded_section *{display:block; height:1px; overflow:hidden; font-size:.01em; background:#C3D9FF}
+.rounded_section1{ margin-left:3px; margin-right:3px; padding-left:1px; padding-right:1px; border-left:1px solid #e5eefe; border-right:1px solid #e5eefe; background:#d2e2fe}
+.rounded_section2{ margin-left:1px; margin-right:1px; padding-right:1px; padding-left:1px; border-left:1px solid #f9fbfe; border-right:1px solid #f9fbfe; background:#cee0fe}
+.rounded_section3{ margin-left:1px; margin-right:1px; border-left:1px solid #cee0fe; border-right:1px solid #cee0fe;}
+.rounded_section4{ border-left:1px solid #e5eefe; border-right:1px solid #e5eefe}
+.rounded_section5{ border-left:1px solid #d2e2fe; border-right:1px solid #d2e2fe}
+.rounded_sectionfg{ background:#C3D9FF}
+.page-title { color: #FFFFFE; font-weight: bold; font-size: large; margin: 0px 0px 0px 8px; }
+.page-title-details { color: #FFFFFE; font-weight: bold; margin-right: 8px; margin-left: 8px; }
+.page-footer { color: #FFFFFE; font-weight: bold; margin-left: 8px}
+.page-footer-details { color: #FFFFFE; font-weight: bold; margin-right: 8px; margin-left: 8px; }
+.majorsection-title { color: #FFFFFE; font-weight: bold; margin: 0px 0px 0px 8px; }
+.majorsection-title-details { color: #FFFFFE; font-weight: bold; margin-right: 8px; margin-left: 8px; }
+.majorsection-contents { margin: 0px 0px 15px 16px; }
+.section-title { color: #1F4F8F; font-weight: bold; margin: 0px 0px 0px 6px; }
+.section-title-details { font-weight: bold; margin-left: 6px; margin-right: 6px; }
+.section-contents { margin: 6px 0px 15px 14px; }
+.bodyTable { border: 0px solid #777777; width:100%; border-collapse: collapse; }
+.bodyTable th { border: 1px solid #777777; white-space:nowrap; background-color: #EEEEEE; padding-left: 3px; padding-right: 3px; }
+.bodyTable td { border: 1px solid #777777; vertical-align: top; padding-left: 3px; padding-right: 3px; }
+td[class=emptyborder] { border: 0px solid #777777; padding: 3px 0px 3px 0px; }
+
+	</style>
+
+</head>
+
+<body>
+
+<div>
+		<b class="rounded_page"><b class="rounded_page1"><b></b></b><b class="rounded_page2"><b></b></b><b class="rounded_page3"></b><b class="rounded_page4"></b><b class="rounded_page5"></b></b>
+		<div class="rounded_pagefg">
+			<h2 class="page-title"><a name="top">CodePro Code Audit for src for JoshHack</a></h2>
+		</div>
+		<b class="rounded_page"><b class="rounded_page5"></b><b class="rounded_page4"></b><b class="rounded_page3"></b><b class="rounded_page2"><b></b></b><b class="rounded_page1"><b></b></b></b>
+	</div>
+	<div class="majorsection-contents">
+		<p>This document contains the results of auditing src for JoshHack at 5/17/18 1:15 PM, using the audit rule set Potential Errors and Refactorings.</p>
+	</div>
+	<table width="100%" border="0">
+		<tr>
+			<td valign="top" width="68%">
+				<div>
+					<b class="rounded_page"><b class="rounded_page1"><b></b></b><b class="rounded_page2"><b></b></b><b class="rounded_page3"></b><b class="rounded_page4"></b><b class="rounded_page5"></b></b>
+					<div class="rounded_pagefg">
+						<h3 class="majorsection-title">Violations by Audit Rule</h3>
+					</div>
+					<b class="rounded_page"><b class="rounded_page5"></b><b class="rounded_page4"></b><b class="rounded_page3"></b><b class="rounded_page2"><b></b></b><b class="rounded_page1"><b></b></b></b>
+				</div>
+				<div class="section-contents">
+					<table>
+					<tr>
+					<td valign="top"><a href="#Append_String">Append String</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Loss_of_Precision_in_Cast">Loss of Precision in Cast</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#String_Concatenation_in_Loop">String Concatenation in Loop</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Block_Depth">Block Depth</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Method_Chain_Length">Method Chain Length</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Too_Many_Violations">Too Many Violations</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Dangling_Else">Dangling Else</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Missing_Block">Missing Block</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Unnecessary_Return_Statement_Parentheses">Unnecessary Return Statement Parentheses</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Declare_As_Interface">Declare As Interface</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Missing_Default_in_Switch">Missing Default in Switch</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Use_"for"_Loops_Instead_of_"while"_Loops">Use &quot;for&quot; Loops Instead of &quot;while&quot; Loops</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Define_Initial_Capacity">Define Initial Capacity</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Non-protected_Constructor_in_Abstract_Type">Non-protected Constructor in Abstract Type</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Use_equals___Rather_Than_==">Use equals() Rather Than ==</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Instance_Field_Security">Instance Field Security</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Overloaded_Methods">Overloaded Methods</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Variable_Declared_Within_a_Loop">Variable Declared Within a Loop</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Instance_Field_Visibility">Instance Field Visibility</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Parenthesize_Condition_in_Conditional_Operator">Parenthesize Condition in Conditional Operator</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Variable_Should_Be_Final">Variable Should Be Final</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Large_Number_of_Parameters">Large Number of Parameters</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Questionable_Assignment">Questionable Assignment</a>
+					</td>	<td width="10"/>
+					<td valign="top">&nbsp;</td>
+					</tr>
+					</table>
+				</div>
+			</td>
+			<td width="2%">
+				 </td>
+			<td valign="top" width="30%">
+				<div>
+					<b class="rounded_page"><b class="rounded_page1"><b></b></b><b class="rounded_page2"><b></b></b><b class="rounded_page3"></b><b class="rounded_page4"></b><b class="rounded_page5"></b></b>
+					<div class="rounded_pagefg">
+						<h3 class="majorsection-title">Violation Counts by Severity</h3>
+					</div>
+					<b class="rounded_page"><b class="rounded_page5"></b><b class="rounded_page4"></b><b class="rounded_page3"></b><b class="rounded_page2"><b></b></b><b class="rounded_page1"><b></b></b></b>
+				</div>
+				<div class="section-contents">
+					<table class="bodyTable">
+						<tr><th>Violation Severity</th><th>Violation Count</th></tr>
+						<tr class="a"><td>High</td><td align="right">2</td></tr>
+						<tr class="b"><td>Medium</td><td align="right">400</td></tr>
+						<tr class="a"><td>Low</td><td align="right">47</td></tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="section-contents">
+		<table class="bodyTable">
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Append_String">Append String (1)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line336">String literal can be replaced by a character literal</a></td>
+<td>
+Replace the string literal with a character literal.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+336</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Block_Depth">Block Depth (3)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line100">Method has 4 levels of nested blocks</a></td>
+<td>
+Reduce the complexity of the method by extracting some of the code into a separate method.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+100</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line39">Method has 6 levels of nested blocks</a></td>
+<td>
+Reduce the complexity of the method by extracting some of the code into a separate method.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+39</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line70">Method has 4 levels of nested blocks</a></td>
+<td>
+Reduce the complexity of the method by extracting some of the code into a separate method.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+70</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Dangling_Else">Dangling Else (27)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line158">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+158</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line355">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+355</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line362">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+362</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line487">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+487</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line511">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+511</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line516">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+516</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line69">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+69</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/GoblinAi.html#line15">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/GoblinAi.html#line17">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/GoblinAi.html#line19">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+19</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/GoblinAi.html#line21">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+21</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/GoblinAi.html#line23">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+23</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line58">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+58</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line82">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+82</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line100">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+100</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line42">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+42</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line57">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+57</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ZombieAi.html#line18">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+ZombieAi.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/FireWeaponScreen.html#line30">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+FireWeaponScreen.java</td>
+<td>
+30</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/LevelUpScreen.html#line53">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+LevelUpScreen.java</td>
+<td>
+53</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line105">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+105</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line107">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+107</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line109">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+109</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line111">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+111</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line134">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+134</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line173">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+173</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line189">Dangling else clause</a></td>
+<td>
+Enclose the then clause in a block.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+189</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Declare_As_Interface">Declare As Interface (14)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line8">Variable should be declared as List&lt;Point&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line9">Variable should be declared as List&lt;Point&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line10">Variable should be declared as Map&lt;Point,Point&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+10</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line42">Method should be declared as List&lt;Point&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+42</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line104">Method should be declared as List&lt;Point&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+104</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line105">Variable should be declared as List&lt;Point&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+105</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line101">Variable should be declared as List&lt;Point&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+101</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line161">Variable should be declared as List&lt;Point&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+161</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line24">Variable should be declared as List&lt;String&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+24</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line42">Method should be declared as List&lt;String&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+42</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line43">Variable should be declared as List&lt;String&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+43</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line28">Variable should be declared as List&lt;String&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+28</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line46">Method should be declared as List&lt;String&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+46</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line47">Variable should be declared as List&lt;String&gt;</a></td>
+<td>
+Change the declared type to be the appropriate interface.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+47</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Define_Initial_Capacity">Define Initial Capacity (1)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line334">Define the initial capacity of StringBuilder instances</a></td>
+<td>
+Pre-define the initial capacity to avoid expensive character array expansion.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+334</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Instance_Field_Security">Instance Field Security (12)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line11">Non-final public instance field: &quot;x&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line12">Non-final public instance field: &quot;y&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+12</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line13">Non-final public instance field: &quot;z&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+13</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line8">Non-final protected instance field: &quot;creature&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Effect.html#line4">Non-final protected instance field: &quot;duration&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Effect.java</td>
+<td>
+4</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Point.html#line8">Non-final public instance field: &quot;x&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Point.html#line9">Non-final public instance field: &quot;y&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Point.html#line10">Non-final public instance field: &quot;z&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+10</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line11">Non-final protected instance field: &quot;player&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line13">Non-final protected instance field: &quot;player&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+13</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/TargetBasedScreen.html#line11">Non-final protected instance field: &quot;player&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+TargetBasedScreen.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/TargetBasedScreen.html#line12">Non-final protected instance field: &quot;caption&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+TargetBasedScreen.java</td>
+<td>
+12</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Instance_Field_Visibility">Instance Field Visibility (6)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line11">Invalid visibility for field: public</a></td>
+<td>
+Correct the visibility of the field.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line12">Invalid visibility for field: public</a></td>
+<td>
+Correct the visibility of the field.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+12</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line13">Invalid visibility for field: public</a></td>
+<td>
+Correct the visibility of the field.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+13</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Point.html#line8">Invalid visibility for field: public</a></td>
+<td>
+Correct the visibility of the field.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Point.html#line9">Invalid visibility for field: public</a></td>
+<td>
+Correct the visibility of the field.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Point.html#line10">Invalid visibility for field: public</a></td>
+<td>
+Correct the visibility of the field.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+10</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Large_Number_of_Parameters">Large Number of Parameters (1)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line109">Too many parameters: 7</a></td>
+<td>
+Reduce the number of parameters by moving some of the values into a separate class.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+109</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Loss_of_Precision_in_Cast">Loss of Precision in Cast (21)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line76">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+76</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line180">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+180</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line61">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+61</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line62">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+62</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/FungusAi.html#line18">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/FungusAi.html#line19">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+19</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LevelUpController.html#line49">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+49</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line167">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+167</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line176">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+176</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line306">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+306</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line395">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+395</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line396">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+396</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line449">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+449</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Tile.html#line7">Casting from &quot;int&quot; to &quot;char&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+Tile.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Tile.html#line8">Casting from &quot;int&quot; to &quot;char&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+Tile.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line78">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+78</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line79">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+79</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line122">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+122</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line123">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+123</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line183">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+183</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line184">Casting from &quot;double&quot; to &quot;int&quot;</a></td>
+<td>
+Either test the value first or attempt to remove the cast.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+184</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Method_Chain_Length">Method Chain Length (1)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line193">Method chain is too long (5)</a></td>
+<td>
+Break the chain by introducing a temporary variable, or define a higher level accessor method that will encapsulate the chain of invocations.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+193</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Missing_Block">Missing Block (125)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line132">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+132</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line157">Missing block in if clause: ai.onEnter(x+mx, y+my, z+mz, tile);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+157</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line159">Missing block in else clause: meleeAttack(other);</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+159</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line193">Missing block in if clause: gainXp(other);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+193</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line203">Missing block in if clause: modifyXp(amount);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+203</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line225">Missing block in if clause: drop(item);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+225</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line299">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+299</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line317">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+317</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line322">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+322</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line354">Missing block in if clause: return world.tile(wx, wy, wz);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+354</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line356">Missing block in else clause: return ai.rememberedTile(wx, wy, wz);</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+356</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line361">Missing block in if clause: return world.creature(wx, wy, wz);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+361</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line363">Missing block in else clause: return null;</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+363</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line417">Missing block in if clause: notify(&quot;Gross!&quot;);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+417</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line427">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+427</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line446">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+446</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line450">Missing block in if clause: doAction(&quot;remove a &quot; + nameOf(item));</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+450</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line454">Missing block in if clause: doAction(&quot;put away a &quot; + nameOf(item));</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+454</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line471">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+471</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line486">Missing block in if clause: return world.item(wx, wy, wz);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+486</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line45">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+45</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line48">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+48</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line52">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+52</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line68">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+68</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line70">Missing block in else clause: creature.moveBy(mx, my, 0);</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+70</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line91">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+91</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line94">Missing block in if clause: toThrow = item;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+94</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line126">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+126</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line132">Missing block in if clause: return true;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+132</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line144">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+144</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/FieldOfView.html#line38">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+FieldOfView.java</td>
+<td>
+38</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/FieldOfView.html#line41">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+FieldOfView.java</td>
+<td>
+41</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/FieldOfView.html#line49">Missing block in if clause: break;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+FieldOfView.java</td>
+<td>
+49</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/FungusAi.html#line14">Missing block in if clause: spread();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/FungusAi.html#line22">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+22</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/GoblinAi.html#line14">Missing block in if clause: useBetterEquipment();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/GoblinAi.html#line16">Missing block in if clause: creature.rangedWeaponAttack(player);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+16</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/GoblinAi.html#line18">Missing block in if clause: creature.throwItem(getWeaponToThrow(), player.x, player.y, player.z);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/GoblinAi.html#line20">Missing block in if clause: hunt(player);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+20</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/GoblinAi.html#line22">Missing block in if clause: creature.pickup();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+22</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/GoblinAi.html#line24">Missing block in else clause: wander();</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+24</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Inventory.html#line35">Missing block in if clause: size++;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Inventory.java</td>
+<td>
+35</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Inventory.html#line43">Missing block in if clause: return true;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Inventory.java</td>
+<td>
+43</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Item.html#line65">Missing block in if clause: details += &quot;  attack:&quot; + attackValue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+65</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Item.html#line68">Missing block in if clause: details += &quot;  thrown:&quot; + thrownAttackValue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+68</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Item.html#line71">Missing block in if clause: details += &quot;  ranged:&quot; + rangedAttackValue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+71</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Item.html#line74">Missing block in if clause: details += &quot;  defense:&quot; + defenseValue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+74</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Item.html#line77">Missing block in if clause: details += &quot;  food:&quot; + foodValue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+77</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LevelUpController.html#line63">Missing block in if clause: return option;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+63</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Line.html#line25">Missing block in if clause: break;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+25</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line30">Missing block in if clause: return totalCost.get(from);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+30</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line57">Missing block in if clause: return createPath(start, closest);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+57</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line59">Missing block in else clause: checkNeighbors(creature, end, closest);</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+59</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line68">Missing block in if clause: closest = other;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+68</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line78">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+78</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line81">Missing block in if clause: reParentNeighborIfNecessary(closest, neighbor);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+81</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line83">Missing block in else clause: reParentNeighbor(closest, neighbor);</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+83</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line99">Missing block in if clause: open.remove(neighbor);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+99</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line101">Missing block in else clause: reParent(neighbor, originalParent);</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+101</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayerAi.html#line24">Missing block in if clause: creature.notify(&quot;There's a &quot; + creature.nameOf(item) + &quot; here.&quot;);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayerAi.java</td>
+<td>
+24</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Point.html#line31">Missing block in if clause: return true;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+31</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Point.html#line33">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+33</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Point.html#line35">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+35</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Point.html#line38">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+38</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Point.html#line40">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+40</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Point.html#line42">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+42</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Point.html#line52">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+52</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line189">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+189</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line206">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+206</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line324">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+324</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line334">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+334</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line360">Missing block in if clause: creature.modifyHp(1, &quot;Killed by inner strength spell?&quot;);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+360</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line415">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+415</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line34">Missing block in if clause: return c;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+34</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line41">Missing block in if clause: return Tile.BOUNDS;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+41</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line43">Missing block in else clause: return tiles[x][y][z];</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+43</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line49">Missing block in if clause: return creature.glyph();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+49</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line52">Missing block in if clause: return item(x,y,z).glyph();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+52</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line60">Missing block in if clause: return creature.color();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+60</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line63">Missing block in if clause: return item(x,y,z).color();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+63</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line70">Missing block in if clause: tiles[x][y][z] = Tile.FLOOR;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+70</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line136">Missing block in if clause: return true;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+136</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line148">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+148</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line154">Missing block in if clause: c.notify(&quot;A %s lands between your feet.&quot;, c.nameOf(item));</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+154</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line53">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+53</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line56">Missing block in if clause: floors++;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+56</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line58">Missing block in else clause: rocks++;</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+58</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line80">Missing block in if clause: removeRegion(nextRegion - 1, z);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+80</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line110">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+110</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line114">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+114</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ZombieAi.html#line14">Missing block in if clause: return;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+ZombieAi.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ZombieAi.html#line17">Missing block in if clause: hunt(player);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+ZombieAi.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ZombieAi.html#line19">Missing block in else clause: wander();</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+ZombieAi.java</td>
+<td>
+19</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/FireWeaponScreen.html#line15">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+FireWeaponScreen.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/FireWeaponScreen.html#line19">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+FireWeaponScreen.java</td>
+<td>
+19</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/FireWeaponScreen.html#line29">Missing block in if clause: player.notify(&quot;There's no one there to fire at.&quot;);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+FireWeaponScreen.java</td>
+<td>
+29</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/FireWeaponScreen.html#line31">Missing block in else clause: player.rangedWeaponAttack(other);</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+FireWeaponScreen.java</td>
+<td>
+31</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line30">Missing block in if clause: terminal.clear(' ', x, y, 20, lines.size());</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+30</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line50">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+50</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line55">Missing block in if clause: line += &quot; (equipped)&quot;;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+55</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LevelUpScreen.html#line47">Missing block in if clause: return this;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+LevelUpScreen.java</td>
+<td>
+47</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/LevelUpScreen.html#line52">Missing block in if clause: return null;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+LevelUpScreen.java</td>
+<td>
+52</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LevelUpScreen.html#line54">Missing block in else clause: return this;</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+LevelUpScreen.java</td>
+<td>
+54</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line99">Missing block in if clause: subscreen.displayOutput(terminal);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+99</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line104">Missing block in if clause: return &quot;Starving&quot;;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+104</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line106">Missing block in if clause: return &quot;Hungry&quot;;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+106</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line108">Missing block in if clause: return &quot;Stuffed&quot;;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+108</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line110">Missing block in if clause: return &quot;Full&quot;;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+110</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line112">Missing block in else clause: return &quot;&quot;;</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+112</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line121">Missing block in if clause: messages.clear();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+121</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line133">Missing block in if clause: terminal.write(world.glyph(wx, wy, player.z), x, y, world.color(wx, wy, player.z));</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+133</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line135">Missing block in else clause: terminal.write(fov.tile(wx, wy, player.z).glyph(), x, y, Color.darkGray);</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+135</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line172">Missing block in if clause: player.notify(&quot;You don't have a ranged weapon equiped.&quot;);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+172</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line174">Missing block in else clause: subscreen = new FireWeaponScreen(player,
+						player.x - getScrollX(), 
+						player.y - getScrollY());</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+174</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line188">Missing block in if clause: return userExits();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+188</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line190">Missing block in else clause: player.moveBy( 0, 0, -1);</a></td>
+<td>
+Add a block around the body of the else clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+190</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line197">Missing block in if clause: subscreen = new LevelUpScreen(player, player.level() - level);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+197</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line200">Missing block in if clause: world.update();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+200</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line203">Missing block in if clause: return new LoseScreen(player);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+203</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line215">Missing block in if clause: return new WinScreen();</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+215</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line34">Missing block in if clause: terminal.clear(' ', x, y, 20, lines.size());</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+34</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line77">Missing block in if clause: return new CastSpellScreen(player, &quot;&quot;, sx, sy, spell);</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+77</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/TargetBasedScreen.html#line29">Missing block in if clause: continue;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+TargetBasedScreen.java</td>
+<td>
+29</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ThrowAtScreen.html#line18">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+ThrowAtScreen.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ThrowAtScreen.html#line22">Missing block in if clause: return false;</a></td>
+<td>
+Add a block around the body of the if clause.		</td>
+<td>Medium</td>
+<td>
+ThrowAtScreen.java</td>
+<td>
+22</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Missing_Default_in_Switch">Missing Default in Switch (3)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line147">Missing default case</a></td>
+<td>
+Add a default case to the switch statement.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+147</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line183">Missing default case</a></td>
+<td>
+Add a default case to the switch statement.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+183</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/TargetBasedScreen.html#line43">Missing default case</a></td>
+<td>
+Add a default case to the switch statement.		</td>
+<td>Medium</td>
+<td>
+TargetBasedScreen.java</td>
+<td>
+43</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Non-protected_Constructor_in_Abstract_Type">Non-protected Constructor in Abstract Type (3)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LevelUpOption.html#line7">Non-protected constructor in abstract class</a></td>
+<td>
+Change the visibility of the constructor to be protected.		</td>
+<td>Medium</td>
+<td>
+LevelUpOption.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line18">Non-protected constructor in abstract class</a></td>
+<td>
+Change the visibility of the constructor to be protected.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/TargetBasedScreen.html#line18">Non-protected constructor in abstract class</a></td>
+<td>
+Change the visibility of the constructor to be protected.		</td>
+<td>Medium</td>
+<td>
+TargetBasedScreen.java</td>
+<td>
+18</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Overloaded_Methods">Overloaded Methods (2)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line100">The method remove is overloaded</a></td>
+<td>
+Either rename the methods so that they no longer have the same name, or change the number of parameters.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+100</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line117">The method addAtEmptyLocation is overloaded</a></td>
+<td>
+Either rename the methods so that they no longer have the same name, or change the number of parameters.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+117</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Parenthesize_Condition_in_Conditional_Operator">Parenthesize Condition in Conditional Operator (19)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/Creature.html#line35">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+Creature.java</td>
+<td>
+35</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/Creature.html#line36">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+Creature.java</td>
+<td>
+36</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/Creature.html#line43">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+Creature.java</td>
+<td>
+43</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/Creature.html#line44">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+Creature.java</td>
+<td>
+44</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/Creature.html#line74">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+Creature.java</td>
+<td>
+74</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line20">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+CreatureAi.java</td>
+<td>
+20</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line121">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+CreatureAi.java</td>
+<td>
+121</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line122">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+CreatureAi.java</td>
+<td>
+122</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line139">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+CreatureAi.java</td>
+<td>
+139</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line140">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+CreatureAi.java</td>
+<td>
+140</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/Item.html#line56">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+Item.java</td>
+<td>
+56</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/Line.html#line17">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+Line.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/Line.html#line18">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+Line.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line25">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+PathFinder.java</td>
+<td>
+25</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line32">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+WorldBuilder.java</td>
+<td>
+32</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line61">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+WorldBuilder.java</td>
+<td>
+61</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/LoseScreen.html#line24">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+LoseScreen.java</td>
+<td>
+24</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/StartScreen.html#line17">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+StartScreen.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/WinScreen.html#line17">Condition in conditional operator should be parenthesized</a></td>
+<td>
+Add the missing parentheses.		</td>
+<td>Low</td>
+<td>
+WinScreen.java</td>
+<td>
+17</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Questionable_Assignment">Questionable Assignment (5)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line504">Questionable method parameter assignment: wx = end.x</a></td>
+<td>
+Check the logic of the assignment statement.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+504</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line505">Questionable method parameter assignment: wy = end.y</a></td>
+<td>
+Check the logic of the assignment statement.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+505</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Line.html#line30">Questionable method parameter assignment: x0 += sx</a></td>
+<td>
+Check the logic of the assignment statement.		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+30</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Line.html#line34">Questionable method parameter assignment: y0 += sy</a></td>
+<td>
+Check the logic of the assignment statement.		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+34</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line109">Questionable method parameter assignment: end = parents.get(end)</a></td>
+<td>
+Check the logic of the assignment statement.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+109</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="String_Concatenation_in_Loop">String Concatenation in Loop (2)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line55">Concatenation of strings within a loop</a></td>
+<td>
+Create a StringBuffer before entering the loop, and append to it within the loop.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+55</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/LevelUpScreen.html#line41">Concatenation of strings within a loop</a></td>
+<td>
+Create a StringBuffer before entering the loop, and append to it within the loop.		</td>
+<td>Medium</td>
+<td>
+LevelUpScreen.java</td>
+<td>
+41</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Too_Many_Violations">Too Many Violations (2)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="highSeverity a"><td><a href="RefactorAudit_files/Creature.html#line1">Maximum violation count of 20 exceeded for the rule &quot;Missing Block&quot; in &quot;/JoshHack/JoshHack/src/game/Creature.java&quot;</a></td>
+<td>
+&nbsp;
+		</td>
+<td>High</td>
+<td>
+Creature.java</td>
+<td>
+1</td>
+</tr>
+	<tr class="highSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line1">Maximum violation count of 20 exceeded for the rule &quot;Variable Should Be Final&quot; in &quot;/JoshHack/JoshHack/src/game/StuffFactory.java&quot;</a></td>
+<td>
+&nbsp;
+		</td>
+<td>High</td>
+<td>
+StuffFactory.java</td>
+<td>
+1</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Unnecessary_Return_Statement_Parentheses">Unnecessary Return Statement Parentheses (1)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/Creature.html#line344">Unnecessary parentheses around the expression in a return statement</a></td>
+<td>
+Delete the unnecessary parentheses.		</td>
+<td>Low</td>
+<td>
+Creature.java</td>
+<td>
+344</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Use_"for"_Loops_Instead_of_"while"_Loops">Use &quot;for&quot; Loops Instead of &quot;while&quot; Loops (5)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/Creature.html#line76">Use a &quot;for&quot; loop instead of a &quot;while&quot; loop</a></td>
+<td>
+Use a &quot;for&quot; loop rather than a &quot;while&quot; loop.		</td>
+<td>Low</td>
+<td>
+Creature.java</td>
+<td>
+76</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/Line.html#line21">Use a &quot;for&quot; loop instead of a &quot;while&quot; loop</a></td>
+<td>
+Use a &quot;for&quot; loop rather than a &quot;while&quot; loop.		</td>
+<td>Low</td>
+<td>
+Line.java</td>
+<td>
+21</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line107">Use a &quot;for&quot; loop instead of a &quot;while&quot; loop</a></td>
+<td>
+Use a &quot;for&quot; loop rather than a &quot;while&quot; loop.		</td>
+<td>Low</td>
+<td>
+PathFinder.java</td>
+<td>
+107</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/World.html#line143">Use a &quot;for&quot; loop instead of a &quot;while&quot; loop</a></td>
+<td>
+Use a &quot;for&quot; loop rather than a &quot;while&quot; loop.		</td>
+<td>Low</td>
+<td>
+World.java</td>
+<td>
+143</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line105">Use a &quot;for&quot; loop instead of a &quot;while&quot; loop</a></td>
+<td>
+Use a &quot;for&quot; loop rather than a &quot;while&quot; loop.		</td>
+<td>Low</td>
+<td>
+WorldBuilder.java</td>
+<td>
+105</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Use_equals___Rather_Than_==">Use equals() Rather Than == (11)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line289">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+289</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line302">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+302</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line448">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+448</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line452">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+452</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line90">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+90</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line90">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+90</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Inventory.html#line24">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+Inventory.java</td>
+<td>
+24</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Inventory.html#line42">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+Inventory.java</td>
+<td>
+42</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line104">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+104</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line54">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+54</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line54">Should not compare values using the equals (==) operator</a></td>
+<td>
+Replace the comparison with an invocation of equals().		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+54</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Variable_Declared_Within_a_Loop">Variable Declared Within a Loop (22)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/Creature.html#line319">The variable &quot;other&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;other&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+Creature.java</td>
+<td>
+319</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/FieldOfView.html#line44">The variable &quot;tile&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;tile&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+FieldOfView.java</td>
+<td>
+44</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/Line.html#line27">The variable &quot;e2&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;e2&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+Line.java</td>
+<td>
+27</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line51">The variable &quot;closest&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;closest&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+PathFinder.java</td>
+<td>
+51</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line411">The variable &quot;nx&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;nx&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+StuffFactory.java</td>
+<td>
+411</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line412">The variable &quot;ny&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;ny&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+StuffFactory.java</td>
+<td>
+412</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line417">The variable &quot;bat&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;bat&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+StuffFactory.java</td>
+<td>
+417</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/World.html#line144">The variable &quot;p&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;p&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+World.java</td>
+<td>
+144</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/World.html#line152">The variable &quot;c&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;c&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+World.java</td>
+<td>
+152</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/World.html#line157">The variable &quot;neighbors&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;neighbors&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+World.java</td>
+<td>
+157</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line46">The variable &quot;floors&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;floors&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+WorldBuilder.java</td>
+<td>
+46</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line47">The variable &quot;rocks&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;rocks&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+WorldBuilder.java</td>
+<td>
+47</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line77">The variable &quot;size&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;size&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+WorldBuilder.java</td>
+<td>
+77</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line106">The variable &quot;p&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;p&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+WorldBuilder.java</td>
+<td>
+106</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line136">The variable &quot;r&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;r&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+WorldBuilder.java</td>
+<td>
+136</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line152">The variable &quot;p&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;p&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+WorldBuilder.java</td>
+<td>
+152</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line47">The variable &quot;item&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;item&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+47</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line52">The variable &quot;line&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;line&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+52</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line129">The variable &quot;wx&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;wx&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+PlayScreen.java</td>
+<td>
+129</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line130">The variable &quot;wy&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;wy&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+PlayScreen.java</td>
+<td>
+130</td>
+</tr>
+	<tr class="lowSeverity a"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line50">The variable &quot;spell&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;spell&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+50</td>
+</tr>
+	<tr class="lowSeverity b"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line52">The variable &quot;line&quot; is initialized within a loop</a></td>
+<td>
+Initialize the &quot;line&quot; variable outside of the loop.		</td>
+<td>Low</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+52</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Variable_Should_Be_Final">Variable Should Be Final (162)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/AppletMain.html#line14">Private field should be final: terminal</a></td>
+<td>
+Declare the &quot;terminal&quot; field final.		</td>
+<td>Medium</td>
+<td>
+AppletMain.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ApplicationMain.html#line14">Private field should be final: terminal</a></td>
+<td>
+Declare the &quot;terminal&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ApplicationMain.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ApplicationMain.html#line47">Local variable should be final: app</a></td>
+<td>
+Declare the &quot;app&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+ApplicationMain.java</td>
+<td>
+47</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line9">Private field should be final: world</a></td>
+<td>
+Declare the &quot;world&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line15">Private field should be final: glyph</a></td>
+<td>
+Declare the &quot;glyph&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line18">Private field should be final: color</a></td>
+<td>
+Declare the &quot;color&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line51">Private field should be final: name</a></td>
+<td>
+Declare the &quot;name&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+51</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line54">Private field should be final: inventory</a></td>
+<td>
+Declare the &quot;inventory&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+54</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line91">Private field should be final: effects</a></td>
+<td>
+Declare the &quot;effects&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+91</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line134">Local variable should be final: tile</a></td>
+<td>
+Declare the &quot;tile&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+134</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line152">Local variable should be final: other</a></td>
+<td>
+Declare the &quot;other&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+152</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line182">Local variable should be final: params2</a></td>
+<td>
+Declare the &quot;params2&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+182</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line197">Local variable should be final: amount</a></td>
+<td>
+Declare the &quot;amount&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+197</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line220">Local variable should be final: corpse</a></td>
+<td>
+Declare the &quot;corpse&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+220</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line244">Local variable should be final: done</a></td>
+<td>
+Declare the &quot;done&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+244</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line312">Local variable should be final: others</a></td>
+<td>
+Declare the &quot;others&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+312</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line331">Local variable should be final: words</a></td>
+<td>
+Declare the &quot;words&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+331</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line334">Local variable should be final: builder</a></td>
+<td>
+Declare the &quot;builder&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+334</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line367">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+367</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Creature.html#line507">Local variable should be final: c</a></td>
+<td>
+Declare the &quot;c&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+507</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Creature.html#line528">Local variable should be final: other</a></td>
+<td>
+Declare the &quot;other&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+528</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line9">Private field should be final: itemNames</a></td>
+<td>
+Declare the &quot;itemNames&quot; field final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line18">Local variable should be final: name</a></td>
+<td>
+Declare the &quot;name&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line61">Local variable should be final: mx</a></td>
+<td>
+Declare the &quot;mx&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+61</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line62">Local variable should be final: my</a></td>
+<td>
+Declare the &quot;my&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+62</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line64">Local variable should be final: other</a></td>
+<td>
+Declare the &quot;other&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+64</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line112">Local variable should be final: points</a></td>
+<td>
+Declare the &quot;points&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+112</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line114">Local variable should be final: mx</a></td>
+<td>
+Declare the &quot;mx&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+114</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line115">Local variable should be final: my</a></td>
+<td>
+Declare the &quot;my&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+115</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line121">Local variable should be final: currentWeaponRating</a></td>
+<td>
+Declare the &quot;currentWeaponRating&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+121</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line122">Local variable should be final: currentArmorRating</a></td>
+<td>
+Declare the &quot;currentArmorRating&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+122</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CreatureAi.html#line139">Local variable should be final: currentWeaponRating</a></td>
+<td>
+Declare the &quot;currentWeaponRating&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+139</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/CreatureAi.html#line140">Local variable should be final: currentArmorRating</a></td>
+<td>
+Declare the &quot;currentArmorRating&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+140</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/FieldOfView.html#line4">Private field should be final: world</a></td>
+<td>
+Declare the &quot;world&quot; field final.		</td>
+<td>Medium</td>
+<td>
+FieldOfView.java</td>
+<td>
+4</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/FieldOfView.html#line12">Private field should be final: tiles</a></td>
+<td>
+Declare the &quot;tiles&quot; field final.		</td>
+<td>Medium</td>
+<td>
+FieldOfView.java</td>
+<td>
+12</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/FungusAi.html#line4">Private field should be final: factory</a></td>
+<td>
+Declare the &quot;factory&quot; field final.		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+4</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/FungusAi.html#line18">Local variable should be final: x</a></td>
+<td>
+Declare the &quot;x&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/FungusAi.html#line19">Local variable should be final: y</a></td>
+<td>
+Declare the &quot;y&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+19</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/FungusAi.html#line26">Local variable should be final: child</a></td>
+<td>
+Declare the &quot;child&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+26</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/GoblinAi.html#line5">Private field should be final: player</a></td>
+<td>
+Declare the &quot;player&quot; field final.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+5</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Inventory.html#line5">Private field should be final: items</a></td>
+<td>
+Declare the &quot;items&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Inventory.java</td>
+<td>
+5</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Item.html#line9">Private field should be final: glyph</a></td>
+<td>
+Declare the &quot;glyph&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Item.html#line12">Private field should be final: color</a></td>
+<td>
+Declare the &quot;color&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+12</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Item.html#line15">Private field should be final: name</a></td>
+<td>
+Declare the &quot;name&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Item.html#line18">Private field should be final: appearance</a></td>
+<td>
+Declare the &quot;appearance&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Item.html#line45">Private field should be final: writtenSpells</a></td>
+<td>
+Declare the &quot;writtenSpells&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+45</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LevelUpController.html#line8">Private field should be final: options</a></td>
+<td>
+Declare the &quot;options&quot; field final.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/LevelUpController.html#line53">Local variable should be final: names</a></td>
+<td>
+Declare the &quot;names&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+53</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LevelUpOption.html#line4">Private field should be final: name</a></td>
+<td>
+Declare the &quot;name&quot; field final.		</td>
+<td>Medium</td>
+<td>
+LevelUpOption.java</td>
+<td>
+4</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Line.html#line8">Private field should be final: points</a></td>
+<td>
+Declare the &quot;points&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Line.html#line15">Local variable should be final: dy</a></td>
+<td>
+Declare the &quot;dy&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Line.html#line17">Local variable should be final: sx</a></td>
+<td>
+Declare the &quot;sx&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Line.html#line18">Local variable should be final: sy</a></td>
+<td>
+Declare the &quot;sy&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+18</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Path.html#line7">Private field should be final: pf</a></td>
+<td>
+Declare the &quot;pf&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Path.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Path.html#line9">Private field should be final: points</a></td>
+<td>
+Declare the &quot;points&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Path.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line8">Private field should be final: open</a></td>
+<td>
+Declare the &quot;open&quot; field final.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line9">Private field should be final: closed</a></td>
+<td>
+Declare the &quot;closed&quot; field final.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line10">Private field should be final: parents</a></td>
+<td>
+Declare the &quot;parents&quot; field final.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+10</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line11">Private field should be final: totalCost</a></td>
+<td>
+Declare the &quot;totalCost&quot; field final.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line32">Local variable should be final: cost</a></td>
+<td>
+Declare the &quot;cost&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+32</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line93">Local variable should be final: originalParent</a></td>
+<td>
+Declare the &quot;originalParent&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+93</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line94">Local variable should be final: currentCost</a></td>
+<td>
+Declare the &quot;currentCost&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+94</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PathFinder.html#line96">Local variable should be final: reparentCost</a></td>
+<td>
+Declare the &quot;reparentCost&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+96</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PathFinder.html#line105">Local variable should be final: path</a></td>
+<td>
+Declare the &quot;path&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+105</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayerAi.html#line7">Private field should be final: messages</a></td>
+<td>
+Declare the &quot;messages&quot; field final.		</td>
+<td>Medium</td>
+<td>
+PlayerAi.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayerAi.html#line8">Private field should be final: fov</a></td>
+<td>
+Declare the &quot;fov&quot; field final.		</td>
+<td>Medium</td>
+<td>
+PlayerAi.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayerAi.html#line22">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PlayerAi.java</td>
+<td>
+22</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Point.html#line36">Local variable should be final: other</a></td>
+<td>
+Declare the &quot;other&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+36</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Point.html#line47">Local variable should be final: points</a></td>
+<td>
+Declare the &quot;points&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+47</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Spell.html#line5">Private field should be final: name</a></td>
+<td>
+Declare the &quot;name&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Spell.java</td>
+<td>
+5</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Spell.html#line8">Private field should be final: manaCost</a></td>
+<td>
+Declare the &quot;manaCost&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Spell.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Spell.html#line11">Private field should be final: effect</a></td>
+<td>
+Declare the &quot;effect&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Spell.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line41">Local variable should be final: player</a></td>
+<td>
+Declare the &quot;player&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+41</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line48">Local variable should be final: fungus</a></td>
+<td>
+Declare the &quot;fungus&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+48</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line55">Local variable should be final: bat</a></td>
+<td>
+Declare the &quot;bat&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+55</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line62">Local variable should be final: zombie</a></td>
+<td>
+Declare the &quot;zombie&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+62</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line69">Local variable should be final: goblin</a></td>
+<td>
+Declare the &quot;goblin&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+69</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line78">Local variable should be final: rock</a></td>
+<td>
+Declare the &quot;rock&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+78</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line85">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+85</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line91">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+91</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line98">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+98</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line105">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+105</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line113">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+113</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line121">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+121</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line130">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+130</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line138">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+138</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line146">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+146</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line153">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+153</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line160">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+160</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line184">Local variable should be final: appearance</a></td>
+<td>
+Declare the &quot;appearance&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+184</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/StuffFactory.html#line201">Local variable should be final: appearance</a></td>
+<td>
+Declare the &quot;appearance&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+201</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/StuffFactory.html#line218">Local variable should be final: appearance</a></td>
+<td>
+Declare the &quot;appearance&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+218</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Tile.html#line14">Private field should be final: glyph</a></td>
+<td>
+Declare the &quot;glyph&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Tile.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/Tile.html#line17">Private field should be final: color</a></td>
+<td>
+Declare the &quot;color&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Tile.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/Tile.html#line20">Private field should be final: description</a></td>
+<td>
+Declare the &quot;description&quot; field final.		</td>
+<td>Medium</td>
+<td>
+Tile.java</td>
+<td>
+20</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line8">Private field should be final: tiles</a></td>
+<td>
+Declare the &quot;tiles&quot; field final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line9">Private field should be final: items</a></td>
+<td>
+Declare the &quot;items&quot; field final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line11">Private field should be final: width</a></td>
+<td>
+Declare the &quot;width&quot; field final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line14">Private field should be final: height</a></td>
+<td>
+Declare the &quot;height&quot; field final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line17">Private field should be final: depth</a></td>
+<td>
+Declare the &quot;depth&quot; field final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line20">Private field should be final: creatures</a></td>
+<td>
+Declare the &quot;creatures&quot; field final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+20</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line47">Local variable should be final: creature</a></td>
+<td>
+Declare the &quot;creature&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+47</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line58">Local variable should be final: creature</a></td>
+<td>
+Declare the &quot;creature&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+58</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line90">Local variable should be final: toUpdate</a></td>
+<td>
+Declare the &quot;toUpdate&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+90</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/World.html#line138">Local variable should be final: points</a></td>
+<td>
+Declare the &quot;points&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+138</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/World.html#line139">Local variable should be final: checked</a></td>
+<td>
+Declare the &quot;checked&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+139</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line8">Private field should be final: width</a></td>
+<td>
+Declare the &quot;width&quot; field final.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line9">Private field should be final: height</a></td>
+<td>
+Declare the &quot;height&quot; field final.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line10">Private field should be final: depth</a></td>
+<td>
+Declare the &quot;depth&quot; field final.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+10</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line40">Local variable should be final: tiles2</a></td>
+<td>
+Declare the &quot;tiles2&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+40</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line101">Local variable should be final: open</a></td>
+<td>
+Declare the &quot;open&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+101</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line132">Local variable should be final: connected</a></td>
+<td>
+Declare the &quot;connected&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+132</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/WorldBuilder.html#line148">Local variable should be final: candidates</a></td>
+<td>
+Declare the &quot;candidates&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+148</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/WorldBuilder.html#line161">Local variable should be final: candidates</a></td>
+<td>
+Declare the &quot;candidates&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+161</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ZombieAi.html#line5">Private field should be final: player</a></td>
+<td>
+Declare the &quot;player&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ZombieAi.java</td>
+<td>
+5</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/CastSpellScreen.html#line7">Private field should be final: spell</a></td>
+<td>
+Declare the &quot;spell&quot; field final.		</td>
+<td>Medium</td>
+<td>
+CastSpellScreen.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ExamineScreen.html#line24">Local variable should be final: article</a></td>
+<td>
+Declare the &quot;article&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+ExamineScreen.java</td>
+<td>
+24</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/FireWeaponScreen.html#line26">Local variable should be final: other</a></td>
+<td>
+Declare the &quot;other&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+FireWeaponScreen.java</td>
+<td>
+26</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line12">Private field should be final: letters</a></td>
+<td>
+Declare the &quot;letters&quot; field final.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+12</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line24">Local variable should be final: lines</a></td>
+<td>
+Declare the &quot;lines&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+24</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line27">Local variable should be final: x</a></td>
+<td>
+Declare the &quot;x&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+27</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line43">Local variable should be final: lines</a></td>
+<td>
+Declare the &quot;lines&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+43</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line44">Local variable should be final: inventory</a></td>
+<td>
+Declare the &quot;inventory&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+44</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line63">Local variable should be final: c</a></td>
+<td>
+Declare the &quot;c&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+63</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/InventoryBasedScreen.html#line65">Local variable should be final: items</a></td>
+<td>
+Declare the &quot;items&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+InventoryBasedScreen.java</td>
+<td>
+65</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/LevelUpScreen.html#line11">Private field should be final: controller</a></td>
+<td>
+Declare the &quot;controller&quot; field final.		</td>
+<td>Medium</td>
+<td>
+LevelUpScreen.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LevelUpScreen.html#line12">Private field should be final: player</a></td>
+<td>
+Declare the &quot;player&quot; field final.		</td>
+<td>Medium</td>
+<td>
+LevelUpScreen.java</td>
+<td>
+12</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/LevelUpScreen.html#line23">Local variable should be final: options</a></td>
+<td>
+Declare the &quot;options&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+LevelUpScreen.java</td>
+<td>
+23</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LevelUpScreen.html#line37">Local variable should be final: options</a></td>
+<td>
+Declare the &quot;options&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+LevelUpScreen.java</td>
+<td>
+37</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/LevelUpScreen.html#line44">Local variable should be final: i</a></td>
+<td>
+Declare the &quot;i&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+LevelUpScreen.java</td>
+<td>
+44</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LookScreen.html#line14">Local variable should be final: creature</a></td>
+<td>
+Declare the &quot;creature&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+LookScreen.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/LookScreen.html#line20">Local variable should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+LookScreen.java</td>
+<td>
+20</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/LookScreen.html#line26">Local variable should be final: tile</a></td>
+<td>
+Declare the &quot;tile&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+LookScreen.java</td>
+<td>
+26</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/LoseScreen.html#line9">Private field should be final: player</a></td>
+<td>
+Declare the &quot;player&quot; field final.		</td>
+<td>Medium</td>
+<td>
+LoseScreen.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line21">Private field should be final: screenWidth</a></td>
+<td>
+Declare the &quot;screenWidth&quot; field final.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+21</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line22">Private field should be final: screenHeight</a></td>
+<td>
+Declare the &quot;screenHeight&quot; field final.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+22</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line23">Private field should be final: messages</a></td>
+<td>
+Declare the &quot;messages&quot; field final.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+23</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line24">Private field should be final: fov</a></td>
+<td>
+Declare the &quot;fov&quot; field final.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+24</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line34">Local variable should be final: factory</a></td>
+<td>
+Declare the &quot;factory&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+34</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line89">Local variable should be final: left</a></td>
+<td>
+Declare the &quot;left&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+89</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line90">Local variable should be final: top</a></td>
+<td>
+Declare the &quot;top&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+90</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line95">Local variable should be final: stats</a></td>
+<td>
+Declare the &quot;stats&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+95</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/PlayScreen.html#line116">Local variable should be final: top</a></td>
+<td>
+Declare the &quot;top&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+116</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/PlayScreen.html#line142">Local variable should be final: level</a></td>
+<td>
+Declare the &quot;level&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+PlayScreen.java</td>
+<td>
+142</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ReadScreen.html#line8">Private field should be final: sx</a></td>
+<td>
+Declare the &quot;sx&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ReadScreen.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ReadScreen.html#line9">Private field should be final: sy</a></td>
+<td>
+Declare the &quot;sy&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ReadScreen.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line14">Private field should be final: letters</a></td>
+<td>
+Declare the &quot;letters&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line15">Private field should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line16">Private field should be final: sx</a></td>
+<td>
+Declare the &quot;sx&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+16</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line17">Private field should be final: sy</a></td>
+<td>
+Declare the &quot;sy&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line28">Local variable should be final: lines</a></td>
+<td>
+Declare the &quot;lines&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+28</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line31">Local variable should be final: x</a></td>
+<td>
+Declare the &quot;x&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+31</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line47">Local variable should be final: lines</a></td>
+<td>
+Declare the &quot;lines&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+47</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line60">Local variable should be final: c</a></td>
+<td>
+Declare the &quot;c&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+60</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ReadSpellScreen.html#line62">Local variable should be final: items</a></td>
+<td>
+Declare the &quot;items&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+ReadSpellScreen.java</td>
+<td>
+62</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/TargetBasedScreen.html#line13">Private field should be final: sx</a></td>
+<td>
+Declare the &quot;sx&quot; field final.		</td>
+<td>Medium</td>
+<td>
+TargetBasedScreen.java</td>
+<td>
+13</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/TargetBasedScreen.html#line14">Private field should be final: sy</a></td>
+<td>
+Declare the &quot;sy&quot; field final.		</td>
+<td>Medium</td>
+<td>
+TargetBasedScreen.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/TargetBasedScreen.html#line40">Local variable should be final: px</a></td>
+<td>
+Declare the &quot;px&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+TargetBasedScreen.java</td>
+<td>
+40</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/TargetBasedScreen.html#line41">Local variable should be final: py</a></td>
+<td>
+Declare the &quot;py&quot; variable final.		</td>
+<td>Medium</td>
+<td>
+TargetBasedScreen.java</td>
+<td>
+41</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ThrowAtScreen.html#line9">Private field should be final: item</a></td>
+<td>
+Declare the &quot;item&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ThrowAtScreen.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="RefactorAudit_files/ThrowScreen.html#line7">Private field should be final: sx</a></td>
+<td>
+Declare the &quot;sx&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ThrowScreen.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="RefactorAudit_files/ThrowScreen.html#line8">Private field should be final: sy</a></td>
+<td>
+Declare the &quot;sy&quot; field final.		</td>
+<td>Medium</td>
+<td>
+ThrowScreen.java</td>
+<td>
+8</td>
+</tr>
+		</table>
+	</div>
+	<div>
+		<b class="rounded_page"><b class="rounded_page1"><b></b></b><b class="rounded_page2"><b></b></b><b class="rounded_page3"></b><b class="rounded_page4"></b><b class="rounded_page5"></b></b>
+		<div class="rounded_pagefg">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" ><tr><td valign="middle">
+			<span class="page-footer">Generated at 5/17/18 1:15 PM</span>
+			</td><td align="right" valign="middle">
+			<span class="page-footer-details">Powered by <span title="0.0.0, UNKNOWN">CodePro Server</span></span></td></tr></table>
+		</div>
+		<b class="rounded_page"><b class="rounded_page5"></b><b class="rounded_page4"></b><b class="rounded_page3"></b><b class="rounded_page2"><b></b></b><b class="rounded_page1"><b></b></b></b>
+	</div>
+
+</body>
+
+</html>
